@@ -13,7 +13,7 @@ def load_library(emoticons)
 end
 
 def get_japanese_emoticon(emoticons, emoticon)
-  load_library(emoticons)
+  hash = load_library(emoticons)
   emoticons = YAML.load_file('./lib/emoticons.yml')
   hash.each do |k, row|
      if hash[k] == emoticon
