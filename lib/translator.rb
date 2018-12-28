@@ -22,6 +22,12 @@ def get_japanese_emoticon(emoticons, english_emoticon)
   end
 end
 
-def get_english_meaning(emoticons, emoticon)
-  load_library(emoticons)
+def get_english_meaning(emoticons, japanese_emoticon)
+  hash = load_library(emoticons)
+  emoticons = YAML.load_file('./lib/emoticons.yml')
+  if hash["get_meaning"].include?(japanese_emoticon)
+     hash["get_meaning"][japanese_emoticon]
+     else
+      return "Sorry, that emoticon was not found"
+  end
 end
