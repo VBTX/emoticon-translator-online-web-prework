@@ -4,7 +4,7 @@ emoticons = YAML.load_file('lib/emoticons.yml')
 def load_library(emoticons)
   hash = Hash.new
   hash[:get_meaning]
-  hash[:get_emoticon] 
+  hash[:get_emoticon]
   return hash
 end
 
