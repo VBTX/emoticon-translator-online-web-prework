@@ -19,7 +19,6 @@ def get_japanese_emoticon(emoticons, english_emoticon)
      hash["get_emoticon"]
      else
       return "Sorry, that emoticon was not found"
-    end
   end
 end
 
