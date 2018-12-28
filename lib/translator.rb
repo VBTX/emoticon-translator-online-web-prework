@@ -15,8 +15,8 @@ end
 def get_japanese_emoticon(emoticons, emoticon)
   hash = load_library(emoticons)
   emoticons = YAML.load_file('./lib/emoticons.yml')
-  hash.each do |k, row|
-     if hash[k] == emoticon
+  hash["get_emoticon"].each do |k, v|
+     if k == emoticon
        return true
      else
       return "Sorry, that emoticon was not found"
