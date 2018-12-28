@@ -13,7 +13,15 @@ def load_library(emoticons)
 end
 
 def get_japanese_emoticon(emoticons, emoticon)
+  emoticons = YAML.load_file('./lib/emoticons.yml')
   load_library(emoticons)
+  emoticons.each do ||k, arr|
+    if k.include?(emoticon)
+      return arr[1]
+    else
+      return "Sorry, that emoticon was not found"
+    end
+  end
 end
 
 def get_english_meaning(emoticons, emoticon)
