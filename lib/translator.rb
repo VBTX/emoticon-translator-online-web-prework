@@ -5,7 +5,7 @@ def load_library(emoticons)
   hash = Hash.new
   emoticons.each do |k, v|
   hash["get_meaning"] = {"#{v[1]}" => k }
-  hash["get_emoticon"] = {}
+  hash["get_emoticon"] = {"#{v[0]}" => "#{v[1]}"}
   hash
 end
 
