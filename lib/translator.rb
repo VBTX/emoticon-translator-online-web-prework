@@ -5,10 +5,10 @@ def load_library(emoticons)
   hash = {:get_meaning => {}, :get_emoticon => {}}
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(emoticons, emoticon)
+  load_library(emoticons)
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(emoticons, emoticon)
+  load_library(emoticons)
 end
