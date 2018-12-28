@@ -12,12 +12,11 @@ def load_library(emoticons)
   hash
 end
 
-def get_japanese_emoticon(emoticons, emoticon)
+def get_japanese_emoticon(emoticons, english_emoticon)
   hash = load_library(emoticons)
   emoticons = YAML.load_file('./lib/emoticons.yml')
-  hash["get_emoticon"].each do |k, v|
-     if k == emoticon
-       return true
+  if hash["get_emoticon"].include?(english_emoticon)
+     hash["get_emoticon"]
      else
       return "Sorry, that emoticon was not found"
     end
