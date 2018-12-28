@@ -13,8 +13,9 @@ def load_library(emoticons)
 end
 
 def get_japanese_emoticon(emoticons, emoticon)
-  emoticons = YAML.load_file('./lib/emoticons.yml')
   load_library(emoticons)
+  emoticons = YAML.load_file('./lib/emoticons.yml')
+
   emoticons.each do |k, arr|
     if k.include?(emoticon)
       return arr[1]
