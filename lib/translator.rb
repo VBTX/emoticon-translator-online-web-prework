@@ -5,7 +5,7 @@ def load_library(emoticons)
   hash = Hash.new
   hash["get_meaning"] = {}
   hash["get_emoticon"] = {}
-  return hash
+  hash
 end
 
 def get_japanese_emoticon(emoticons, emoticon)
